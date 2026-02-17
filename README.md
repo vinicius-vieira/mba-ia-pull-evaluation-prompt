@@ -70,6 +70,12 @@ Ao receber um bug report, siga estes passos mentalmente:
 
 ## Resultados Finais
 
+### Links Públicos do LangSmith
+
+- **Dashboard do Projeto (avaliações):** [https://smith.langchain.com/o/ee0f8b68-bd97-4ccd-9a82-8ef266fee4f5/projects/p/405307ca-9589-4f32-aafe-d8c06b39d2e4](https://smith.langchain.com/o/ee0f8b68-bd97-4ccd-9a82-8ef266fee4f5/projects/p/405307ca-9589-4f32-aafe-d8c06b39d2e4)
+- **Prompt Otimizado no Hub:** [https://smith.langchain.com/hub/vinicius-vieira/bug_to_user_story_v2](https://smith.langchain.com/hub/vinicius-vieira/bug_to_user_story_v2)
+- **Exemplo de Run (chain completa):** [https://smith.langchain.com/public/806baecd-ed49-4400-a4ac-83fba0b5345f/r](https://smith.langchain.com/public/806baecd-ed49-4400-a4ac-83fba0b5345f/r)
+
 ### Tabela Comparativa: v1 vs v2
 
 | Métrica | Prompt v1 (Ruim) | Prompt v2 (Otimizado) | Meta |
