@@ -20,6 +20,7 @@ Configure o provider no arquivo .env através da variável LLM_PROVIDER.
 import os
 import sys
 import json
+import time
 from typing import List, Dict, Any
 from pathlib import Path
 from dotenv import load_dotenv
@@ -207,17 +208,28 @@ def evaluate_prompt(
 
         total_examples = min(10, len(examples))
         for i, example in enumerate(examples[:10], 1):
+            print(f"      [{i}/{total_examples}] Gerando user story...", flush=True)
             result = evaluate_prompt_on_example(prompt_template, example, llm)
+            time.sleep(1)
 
             if result["answer"]:
                 bug_report = result["question"]
                 user_story = result["answer"]
                 reference = result["reference"]
 
+                print(f"      [{i}/{total_examples}] Avaliando...", end="", flush=True)
                 tone = evaluate_tone_score(bug_report, user_story, reference)
+                time.sleep(1)
+                print(f" T:{tone['score']:.2f}", end="", flush=True)
                 acceptance = evaluate_acceptance_criteria_score(bug_report, user_story, reference)
+                time.sleep(1)
+                print(f" A:{acceptance['score']:.2f}", end="", flush=True)
                 fmt = evaluate_user_story_format_score(bug_report, user_story, reference)
+                time.sleep(1)
+                print(f" F:{fmt['score']:.2f}", end="", flush=True)
                 completeness = evaluate_completeness_score(bug_report, user_story, reference)
+                time.sleep(1)
+                print(f" C:{completeness['score']:.2f}", flush=True)
 
                 tone_scores.append(tone["score"])
                 acceptance_scores.append(acceptance["score"])

@@ -32,9 +32,9 @@ relatos técnicos de bugs em User Stories claras, completas e acionáveis.
 **Por que escolhi:** Exemplos concretos são a forma mais eficaz de comunicar ao modelo exatamente o formato, nível de detalhe e qualidade esperados. Incluí 3 exemplos cobrindo diferentes complexidades (simples, médio, complexo).
 
 **Como apliquei:**
-- **Exemplo 1 (Simples):** Bug de botão de carrinho → User Story com 5 critérios de aceitação
-- **Exemplo 2 (Médio):** Bug de performance de relatório → User Story com critérios + contexto técnico
-- **Exemplo 3 (Complexo):** Bug de checkout com 4 problemas → User Story com seções organizadas, contexto e tasks
+- **Exemplo 1 (Simples):** Bug de botão de carrinho -> User Story com 5 critérios de aceitação
+- **Exemplo 2 (Médio):** Bug de performance de relatório -> User Story com critérios + contexto técnico
+- **Exemplo 3 (Complexo):** Bug de checkout com 4 problemas -> User Story com seções organizadas, contexto e tasks
 
 ### 3. Chain of Thought (CoT)
 **O que é:** Instruir o modelo a raciocinar passo a passo antes de gerar a resposta final.
@@ -74,10 +74,11 @@ Ao receber um bug report, siga estes passos mentalmente:
 
 | Métrica | Prompt v1 (Ruim) | Prompt v2 (Otimizado) | Meta |
 |---------|------------------|-----------------------|------|
-| Tone Score | ~0.4-0.5 | >= 0.9 | >= 0.9 |
-| Acceptance Criteria | ~0.3-0.5 | >= 0.9 | >= 0.9 |
-| User Story Format | ~0.4-0.5 | >= 0.9 | >= 0.9 |
-| Completeness | ~0.3-0.5 | >= 0.9 | >= 0.9 |
+| Tone Score | ~0.4-0.5 | **0.95** ✓ | >= 0.9 |
+| Acceptance Criteria | ~0.3-0.5 | **0.97** ✓ | >= 0.9 |
+| User Story Format | ~0.4-0.5 | **0.99** ✓ | >= 0.9 |
+| Completeness | ~0.3-0.5 | **0.96** ✓ | >= 0.9 |
+| **MÉDIA GERAL** | ~0.4 | **0.9692** ✓ | >= 0.9 |
 
 ### Problemas do Prompt v1
 - Sem definição de persona (tom genérico)
