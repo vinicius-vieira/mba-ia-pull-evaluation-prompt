@@ -202,7 +202,7 @@ def get_llm(model: Optional[str] = None, temperature: float = 0.0):
 
         return ChatOpenAI(
             model=model_name,
-            temperature=temperature,
+            temperature=1,
             api_key=api_key
         )
 
