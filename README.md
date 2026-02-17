@@ -74,7 +74,61 @@ Ao receber um bug report, siga estes passos mentalmente:
 
 - **Dashboard do Projeto (avaliações):** [https://smith.langchain.com/o/ee0f8b68-bd97-4ccd-9a82-8ef266fee4f5/projects/p/405307ca-9589-4f32-aafe-d8c06b39d2e4](https://smith.langchain.com/o/ee0f8b68-bd97-4ccd-9a82-8ef266fee4f5/projects/p/405307ca-9589-4f32-aafe-d8c06b39d2e4)
 - **Prompt Otimizado no Hub:** [https://smith.langchain.com/hub/vinicius-vieira/bug_to_user_story_v2](https://smith.langchain.com/hub/vinicius-vieira/bug_to_user_story_v2)
-- **Exemplo de Run (chain completa):** [https://smith.langchain.com/public/806baecd-ed49-4400-a4ac-83fba0b5345f/r](https://smith.langchain.com/public/806baecd-ed49-4400-a4ac-83fba0b5345f/r)
+
+### Screenshots
+
+![Resultado da Avaliação - screenshot:1](screenshot1.png)
+![Resultado da Avaliação - screenshot:2](screenshot2.png)
+![Resultado da Avaliação - screenshot:3](screenshot3.png)
+![Resultado da Avaliação - screenshot:4](screenshot4.png)
+
+![Resultado da Avaliação - screenshot:5](screenshot5.png)
+
+### Log do processamento
+
+```
+==================================================
+AVALIAÇÃO DE PROMPTS OTIMIZADOS
+==================================================
+
+Provider: openai
+Modelo Principal: gpt-5-mini
+Modelo de Avaliação: gpt-5-mini
+
+Criando dataset de avaliação: prompt-optimization-challenge-resolved-eval...
+   ✓ Carregados 15 exemplos do arquivo datasets/bug_to_user_story.jsonl
+   ✓ Dataset 'prompt-optimization-challenge-resolved-eval' já existe, usando existente
+
+🔍 Avaliando: bug_to_user_story_v2
+   Puxando prompt do LangSmith Hub: bug_to_user_story_v2
+   ✓ Prompt carregado com sucesso
+   Dataset: 15 exemplos
+   Avaliando exemplos com métricas Bug-to-User-Story...
+      [1/10] T:0.94 A:0.94 F:1.00 C:0.99
+      [2/10] T:0.94 A:0.95 F:0.98 C:0.94
+      [3/10] T:0.96 A:0.97 F:0.96 C:0.93
+      [4/10] T:0.94 A:0.97 F:1.00 C:0.92
+      [5/10] T:0.93 A:0.97 F:1.00 C:1.00
+      [6/10] T:0.91 A:0.96 F:1.00 C:0.98
+      [7/10] T:1.00 A:0.99 F:1.00 C:1.00
+      [8/10] T:0.91 A:0.96 F:1.00 C:0.95
+      [9/10] T:0.97 A:0.89 F:1.00 C:0.98
+      [10/10] T:0.96 A:0.95 F:0.98 C:0.97
+
+==================================================
+Prompt: bug_to_user_story_v2
+==================================================
+
+Métricas Bug-to-User-Story:
+  - Tone Score:                0.95 ✓
+  - Acceptance Criteria Score: 0.96 ✓
+  - User Story Format Score:   0.99 ✓
+  - Completeness Score:        0.97 ✓
+
+📊 MÉDIA GERAL: 0.9650
+
+✅ STATUS: APROVADO ✓ - Todas as métricas atingiram o mínimo de 0.9
+```
 
 ### Tabela Comparativa: v1 vs v2
 
